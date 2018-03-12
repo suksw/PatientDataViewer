@@ -1,0 +1,276 @@
+{
+  "resourceType": "Bundle",
+  "id": "1da223df-90be-47d9-8f01-ba2b0f7d5d2f",
+  "meta": {
+    "lastUpdated": "2018-03-12T10:44:31.637+00:00"
+  },
+  "type": "searchset",
+  "total": 7,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://hapi.fhir.org/baseDstu3/Patient?_count=3&_format=json&gender=female&given=a"
+    },
+    {
+      "relation": "next",
+      "url": "http://hapi.fhir.org/baseDstu3?_getpages=1da223df-90be-47d9-8f01-ba2b0f7d5d2f&_getpagesoffset=3&_count=3&_format=json&_pretty=true&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://hapi.fhir.org/baseDstu3/Patient/1058165",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "1058165",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2018-03-12T05:32:21.026+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Aaliyah Davies</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "text": "Aaliyah Davies",
+            "family": "Davies",
+            "given": [
+              "Aaliyah"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1951-10-11"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseDstu3/Patient/918923",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "918923",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2018-03-08T07:20:55.656+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ariana grande</div>"
+        },
+        "name": [
+          {
+            "use": "official",
+            "text": "Ariana grande",
+            "family": "grande",
+            "given": [
+              "Ariana"
+            ]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1987-09-15"
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://hapi.fhir.org/baseDstu3/Patient/734546",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "734546",
+        "meta": {
+          "versionId": "4",
+          "lastUpdated": "2018-03-07T17:55:43.899+00:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">JOHN1 A <b>APPLESEED </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>1289</td></tr><tr><td>Address</td><td><span>1 CATALYZE STREET </span><br/><span>MADISON </span><span>WI </span></td></tr><tr><td>Date of birth</td><td><span>01 January 1971</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "EE",
+                  "display": "EE"
+                }
+              ]
+            },
+            "system": "http://www.invivocorp.com/fhir/identifier-type/EnterpriseId",
+            "value": "1289"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "MR",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "system": "http://www.invivocorp.com/fhir/identifier-type/MR",
+            "value": "MR82"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/v2/0203",
+                  "code": "EE",
+                  "display": "EE"
+                }
+              ]
+            },
+            "system": "http://www.invivocorp.com/fhir/identifier-type/EE",
+            "value": "1289"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/identifier-type",
+                  "code": "SS",
+                  "display": "Social security number"
+                }
+              ]
+            },
+            "system": "http://www.invivocorp.com/fhir/identifier-type/SS",
+            "value": "123456789"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/identifier-type",
+                  "code": "AN",
+                  "display": "Account number"
+                }
+              ]
+            },
+            "system": "http://www.invivocorp.com/fhir/identifier-type/AN",
+            "value": "MRN12345001"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/identifier-type",
+                  "code": "DL",
+                  "display": "Driver's license number"
+                }
+              ]
+            },
+            "system": "http://www.invivocorp.com/fhir/identifier-type/DL",
+            "value": "987654"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": "APPLESEED",
+            "given": [
+              "JOHN1",
+              "A"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(414)379-1212",
+            "use": "home"
+          },
+          {
+            "system": "phone",
+            "value": "(414)271-3434",
+            "use": "work"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1971-01-01",
+        "deceasedDateTime": "2017-01-30T17:20:34.000+05:30",
+        "address": [
+          {
+            "line": [
+              "1 CATALYZE STREET"
+            ],
+            "city": "MADISON",
+            "state": "WI",
+            "postalCode": "53005-1020"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        },
+        "multipleBirthInteger": 1,
+        "contact": [
+          {
+            "relationship": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/patient-contact-relationship",
+                    "code": "partner",
+                    "display": "Partner"
+                  }
+                ]
+              }
+            ],
+            "name": {
+              "family": "APPLESEED",
+              "given": [
+                "BARBARA",
+                "J"
+              ]
+            },
+            "telecom": [
+              {
+                "value": "264856783",
+                "use": "home"
+              }
+            ],
+            "address": {
+              "line": [
+                "rr layout"
+              ]
+            },
+            "gender": "female",
+            "organization": {
+              "display": "VHIS"
+            }
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "code": "ENGLISH"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ],
+        "managingOrganization": {
+          "reference": "Organization/734545"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}
