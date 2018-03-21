@@ -4,6 +4,7 @@ import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 
 public class DataSupplier {
@@ -18,28 +19,12 @@ public class DataSupplier {
         this.onlineDataFetcher = new OnlineDataFetcher();
     }
 
-    public JSONObject supplyPatientDataRealtime() throws ExceptionDataFetcher {
-        onlineDataFetcher.fetchAndStorePatientData();
-        return readJsonObjectFromFile(Config.patientsJsonFile);
-    }
     public JSONObject supplyPatientDataOffline() throws ExceptionDataFetcher {
         return readJsonObjectFromFile(Config.patientsJsonFile);
     }
-
-    public JSONObject supplyEncounterDataRealtime(JSONObject patientData) throws ExceptionDataFetcher {
-        onlineDataFetcher.fetchAndStoreEncounterData(patientData);
-        return readJsonObjectFromFile(Config.encountersJsonFile);
-    }
-
     public JSONObject supplyEncounterDataOffline() throws ExceptionDataFetcher {
         return readJsonObjectFromFile(Config.encountersJsonFile);
     }
-
-    public JSONObject supplyObservationDataRealtime(JSONObject encounterData) throws ExceptionDataFetcher {
-        onlineDataFetcher.fetchAndStoreObservationData(encounterData);
-        return readJsonObjectFromFile(Config.observationJsonFile);
-    }
-
     public JSONObject supplyObservationDataOffline() throws ExceptionDataFetcher {
         return readJsonObjectFromFile(Config.observationJsonFile);
     }

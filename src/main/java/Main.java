@@ -1,8 +1,8 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.LoggerContext;
-import org.json.simple.JSONObject;
 
 import java.io.File;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ExceptionDataFetcher {
@@ -10,14 +10,13 @@ public class Main {
         File file = new File("log4j2.xml");
         context.setConfigLocation(file.toURI());
 
+        OnlineDataFetcher onlineDataFetcher = new OnlineDataFetcher();
         DataSupplier dataSupplier = DataSupplier.getInstance();
 
-        //Realtime
-        JSONObject patientData = dataSupplier.supplyPatientDataRealtime();
-        JSONObject encounterData = dataSupplier.supplyEncounterDataRealtime(patientData);
-        JSONObject observationsData = dataSupplier.supplyObservationDataRealtime(encounterData);
+        List<String> patientIds = onlineDataFetcher.fetchAndStorePatientData();
+        List<String> encounterIds = onlineDataFetcher.fetchAndStoreEncounterData(patientIds);
+        onlineDataFetcher.fetchAndStoreObservationData(encounterIds);
 
-        //Offline (when the frontend and this module both exists within the same host)
         System.out.println(dataSupplier.supplyPatientDataOffline());
         System.out.println(dataSupplier.supplyEncounterDataOffline());
         System.out.println(dataSupplier.supplyObservationDataOffline());
